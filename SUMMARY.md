@@ -2,9 +2,9 @@
 
 * [LabEx Overview](README.md)
 * [What Are the Lab and Challenge](what-are-the-lab-and-challenge.md)
-* [Formatting and Design Guide](formatting-and-design-guide.md)
 * [How to Start](how-to-start.md)
 * [How to Submit](how-to-submit.md)
+* [Formatting and Design Guide](formatting-and-design-guide.md)
 * [Introduction of Skill Tree](introduction-of-skill-tree.md)
 * [Recommended Workflows](recommended-workflows.md)
 * [GitHub Copilot Tips](github-copilot-tips.md)
