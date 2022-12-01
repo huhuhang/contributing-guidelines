@@ -16,12 +16,12 @@ We need experienced technical writers or engineers to help enrich this platform'
 
 **Labs have the following characteristics:**
 
-* Each Lab should be an independent learning unit.
-* Each Lab has a specific goal and a set of steps to achieve that goal.
-* **Each step has One Main-Skill** and one or more Sub-Skills.
-* The verification script is required for each step. (Except for exceptional cases.)
-* Take no more than 3\~5 minutes for the learner to complete a step and no more than 30 minutes for the learner to complete a Lab.
-* Complex Labs with no learning time limit.
+- Each Lab should be an independent learning unit.
+- Each Lab has a specific goal and a set of steps to achieve that goal.
+- **Each step has One Main-Skill** and one or more Sub-Skills.
+- The verification script is required for each step. (Except for exceptional cases.)
+- Take no more than 3\~5 minutes for the learner to complete a step and no more than 30 minutes for the learner to complete a Lab.
+- Complex Labs with no learning time limit.
 
 {% hint style="info" %}
 Examples: [https://github.com/huhuhang/labex-trial](https://github.com/huhuhang/labex-trial)
@@ -39,12 +39,24 @@ When students cannot pass a Challenge, they can learn the Lab, which contains th
 
 **Challenge has the following characteristics:**
 
-* Each Challenge should be an independent testing unit.
-* Each Challenge has a specific goal and a set of steps to Challenge the goal.
-* **Each step has One Main-Skill** and one or more Sub-Skills.
-* The verification script is required for each step. ([See more details](how-to-start.md#verify-script))&#x20;
-* No time limit for the learner to complete a Challenge.
+- Each Challenge should be an independent testing unit.
+- Each Challenge has a specific goal and a set of steps to Challenge the goal.
+- **Each step has One Main-Skill** and one or more Sub-Skills.
+- The verification script is required for each step. ([See more details](how-to-start.md#verify-script))&#x20;
+- No time limit for the learner to complete a Challenge.
 
 {% hint style="info" %}
 Examples: [https://github.com/huhuhang/labex-trial](https://github.com/huhuhang/labex-trial)
 {% endhint %}
+
+## Some Tips
+
+In most cases, we recommend that you create a Lab first, and then create a Challenge based on the Lab. This is because the Lab contains the complete steps, while the Challenge includes only the objectives that the students need to accomplish on their own.
+
+When students cannot pass a Challenge, they can learn the Lab, which contains the same skill points. This is a great way to learn and practice the skills.
+
+You can see the example: [https://github.com/huhuhang/labex-trial/tree/master/python](https://github.com/huhuhang/labex-trial/tree/master/python)
+
+The lab contains 6 steps, but only the sixth step contains the verification script. We evolved the sixth step into a challenge, containing slight changes.
+
+For the same reason, if you create a Challenge first, you can create a Lab based on the Challenge.
