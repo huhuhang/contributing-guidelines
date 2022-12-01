@@ -42,7 +42,7 @@ Grammarly 有免费版和付费版，免费版可以满足你的日常使用。
 
 ### 试写目标
 
-* 至少完成 1 个 Lab/Challenge，提交到试写仓库中，并通过 Review。
+* 至少完成一组配套的 Lab/Challenge，包含 1 个 Lab 和 1 个 Challenge。提交的试写 Lab 和 Challenge 是完全配套，同样的步骤，同样的 Skills，只是 Lab 直接把操作包含在步骤中，而 Challenge 需要用户自己完成。
 * 试写仓库（推荐）：[https://github.com/huhuhang/labex-trial](https://github.com/huhuhang/labex-trial)
 * 国内镜像：[https://gitee.com/huhuhang/labex-trial](https://gitee.com/huhuhang/labex-trial)
 
