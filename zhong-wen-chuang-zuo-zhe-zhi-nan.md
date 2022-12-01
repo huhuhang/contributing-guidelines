@@ -43,7 +43,7 @@ Grammarly 有免费版和付费版，免费版可以满足你的日常使用。
 ### 试写目标
 
 1. 至少完成一组配套的 Lab/Challenge，包含 1 个 Lab 和 1 个 Challenge，需要包含多个 steps。
-2. 提交的试写 Lab 和 Challenge 是最好是配套的。[参考说明](what-are-the-lab-and-challenge.md#some-tips))
+2. 提交的试写 Lab 和 Challenge 是最好是配套的。[参考说明](what-are-the-lab-and-challenge.md#some-tips)
 
 ### 试写要求
 
