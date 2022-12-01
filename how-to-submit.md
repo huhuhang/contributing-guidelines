@@ -6,17 +6,17 @@ Before submitting new labs, please read the [Collaborating with pull requests.](
 
 1. Open your terminal
 2. Navigate to your local repository
-3.  Create a new branch with the following command:
+3. Create a new branch with the following command:
 
-    ```bash
-    git checkout -b <branch-name>
-    ```
+   ```bash
+   git checkout -b <branch-name>
+   ```
 
-    Replace `<branch-name>` with the name of your branch. For example:
+   Replace `<branch-name>` with the name of your branch. For example:
 
-    ```bash
-    git checkout -b add-lab-hello-world
-    ```
+   ```bash
+   git checkout -b add-lab-hello-world
+   ```
 
 ## Step 2: Add your changes
 
@@ -28,47 +28,49 @@ Before submitting new labs, please read the [Collaborating with pull requests.](
 
 1. Open your terminal
 2. Navigate to your local repository
-3.  Add your changes with the following command:
+3. Add your changes with the following command:
 
-    ```bash
-    git add <file-name>
-    ```
+   ```bash
+   git add <file-name>
+   ```
 
-    Replace `<file-name>` with the name of the file you want to add. For example:
+   Replace `<file-name>` with the name of the file you want to add. For example:
 
-    ```bash
-    git add python/add-lab-hello-world/step1.md
-    ```
+   ```bash
+   git add python/add-lab-hello-world/step1.md
+   ```
 
-    You can also add all files with the following command:
+   You can also add all files with the following command:
 
-    ```bash
-    git add .
-    ```
-4.  Commit your changes with the following command:
+   ```bash
+   git add .
+   ```
 
-    ```bash
-     git commit -m "<commit-message>"
-    ```
+4. Commit your changes with the following command:
 
-    Replace `<commit-message>` with a message that describes your changes. For example:
+   ```bash
+    git commit -m "<commit-message>"
+   ```
 
-    ```bash
-    git commit -m "Add lab-hello-world"
-    ```
+   Replace `<commit-message>` with a message that describes your changes. For example:
 
-    You can learn more about [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
-5.  Push your changes to GitHub with the following command:
+   ```bash
+   git commit -m "Add lab-hello-world"
+   ```
 
-    ```bash
-    git push origin <branch-name>
-    ```
+   You can learn more about [Semantic Commit Messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
 
-    Replace `<branch-name>` with the name of your branch. For example:
+5. Push your changes to GitHub with the following command:
 
-    ```bash
-    git push origin add-lab-hello-world
-    ```
+   ```bash
+   git push origin <branch-name>
+   ```
+
+   Replace `<branch-name>` with the name of your branch. For example:
+
+   ```bash
+   git push origin add-lab-hello-world
+   ```
 
 ## Step 4: Create a pull request
 

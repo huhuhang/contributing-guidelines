@@ -4,10 +4,10 @@
 
 To author interactive labs and challenges, you must already be familiar with the following:
 
-* Using the Linux command-line interface (Specifically, a bash terminal).
-* [Git](https://docs.github.com/en/get-started/using-git/about-git) (Cloning a repository, making commits, and pushing commits to a server).
-* [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) (Writing text and basic formatting syntax).
-* JSON (Cofig file format).
+- Using the Linux command-line interface (Specifically, a bash terminal).
+- [Git](https://docs.github.com/en/get-started/using-git/about-git) (Cloning a repository, making commits, and pushing commits to a server).
+- [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) (Writing text and basic formatting syntax).
+- JSON (Cofig file format).
 
 Of course, you'll also need expertise in the subject matter of your labs.
 
@@ -44,14 +44,14 @@ repo-name
 
 Note:
 
-* `index.json`: the config file for your scenario, including where you specify the title, description, level, and estimated time to complete, as shown to learners. **Learn more about** [**index.json**](https://www.katacoda.community/essentials/scenario-syntax.html#understanding-katacoda-s-index-json)**.**
-* `intro.md` and `finish.md`: Markdown files for the text shown at the start and end of the Lab. Format requirements are detailed in the template experiment.
-* `setup.sh`: a shell script executed at the lab environment starting.
-* `step*.md`: Markdown files for the lesson text shown alongside each "step" of the Lab.
-* `verify*.sh`: (Optional) Shell scripts executed to verify the steps are complete. One step can have single or multiple verification scripts. Some steps may not need verification scripts.
-* `assets`: (Optional) the folder includes all the example data or supporting files used in the Lab.
-  * Including images of the markdown files, and images should be [compressed](https://tinypng.com/) to reduce the size of the repository.
-* `solutions`: (Optional) the folder includes all the solution files of challenges. The lab will not include the solution files.
+- `index.json`: the config file for your scenario, including where you specify the title, description, level, and estimated time to complete, as shown to learners. **Learn more about** [**index.json**](https://www.katacoda.community/essentials/scenario-syntax.html#understanding-katacoda-s-index-json)**.**
+- `intro.md` and `finish.md`: Markdown files for the text shown at the start and end of the Lab. Format requirements are detailed in the template experiment.
+- `setup.sh`: a shell script executed at the lab environment starting.
+- `step*.md`: Markdown files for the lesson text shown alongside each "step" of the Lab.
+- `verify*.sh`: (Optional) Shell scripts executed to verify the steps are complete. One step can have single or multiple verification scripts. Some steps may not need verification scripts.
+- `assets`: (Optional) the folder includes all the example data or supporting files used in the Lab.
+  - Including images of the markdown files, and images should be [compressed](https://tinypng.com/) to reduce the size of the repository.
+- `solutions`: (Optional) the folder includes all the solution files of challenges. The lab will not include the solution files.
 
 Most of the configuration items in the index.json file are already written. You must add the `steps` and `assets` in the `details` configuration item.
 
@@ -176,9 +176,9 @@ The difficulty of the Lab/Challenge is defined in the `index.json` file.
 
 The difficulty can be one of the following:
 
-* `Beginner`: The Lab/Challenge contains only single or multiple skills **in the same skills group**. and the skills are easy. Usually, the Lab/Challenge is a single step.
-* `Intermediate`: The Lab/Challenge contains multiple skills from **different skill groups**. and the skills are not very difficult.
-* `Advanced`: The Lab/Challenge contains multiple skills from **different subjects or projects**. and the skills are more difficult. Usually, the Lab/Challenge is a multi-step Lab/Challenge.
+- `Beginner`: The Lab/Challenge contains only single or multiple skills **in the same skills group**. and the skills are easy. Usually, the Lab/Challenge is a single step.
+- `Intermediate`: The Lab/Challenge contains multiple skills from **different skill groups**. and the skills are not very difficult.
+- `Advanced`: The Lab/Challenge contains multiple skills from **different subjects or projects**. and the skills are more difficult. Usually, the Lab/Challenge is a multi-step Lab/Challenge.
 
 _Our skills structure: skill > skill group > subject > project. e.g: cd > Directory Operations > Linux Commands > Linux_
 
@@ -186,12 +186,12 @@ _Our skills structure: skill > skill group > subject > project. e.g: cd > Direct
 
 The basic workflow of authoring a lab on GitHub is as follows:
 
-* Make edits.
-* Copy support files to the assets folder.
-* Update the `index.json` file with steps and assets.
-* Save changes.
-* Commit changes locally with git.
-* Push commits back to the remote.
+- Make edits.
+- Copy support files to the assets folder.
+- Update the `index.json` file with steps and assets.
+- Save changes.
+- Commit changes locally with git.
+- Push commits back to the remote.
 
 Wait 30-60 seconds, then access the test course in your browser.
 

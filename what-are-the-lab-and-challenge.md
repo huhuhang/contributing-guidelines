@@ -42,7 +42,7 @@ When students cannot pass a Challenge, they can learn the Lab, which contains th
 - Each Challenge should be an independent testing unit.
 - Each Challenge has a specific goal and a set of steps to Challenge the goal.
 - **Each step has One Main-Skill** and one or more Sub-Skills.
-- The verification script is required for each step. ([See more details](how-to-start.md#verify-script))&#x20;
+- The verification script is required for each step. ([See more details](how-to-start.md#verify-script))
 - No time limit for the learner to complete a Challenge.
 
 {% hint style="info" %}

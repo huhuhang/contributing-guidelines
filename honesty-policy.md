@@ -6,9 +6,9 @@ If you are unsure about whether or not you are plagiarizing, please ask your men
 
 You can learn more about:
 
-* Plagiarism Definition
-  * https://en.wikipedia.org/wiki/Plagiarism
-  * https://www.ox.ac.uk/students/academic/guidance/skills/plagiarism
-* Open-source licenses
-  * https://choosealicense.com/licenses/
-  * https://opensource.org/licenses
+- Plagiarism Definition
+  - https://en.wikipedia.org/wiki/Plagiarism
+  - https://www.ox.ac.uk/students/academic/guidance/skills/plagiarism
+- Open-source licenses
+  - https://choosealicense.com/licenses/
+  - https://opensource.org/licenses
