@@ -1,4 +1,4 @@
-# What Are the Lab and Challenge
+# Labs and Challenges
 
 The smallest resource unit in LabEx is Lab and Challenge. Muti-Labs and multi-Challenges are grouped into a course.
 
@@ -49,7 +49,7 @@ When students cannot pass a Challenge, they can learn the Lab, which contains th
 Examples: [https://github.com/huhuhang/labex-trial](https://github.com/huhuhang/labex-trial)
 {% endhint %}
 
-## Some Tips
+## More Details
 
 In most cases, we recommend that you create a Lab first, and then create a Challenge based on the Lab. This is because the Lab contains the complete steps, while the Challenge includes only the objectives that the students need to accomplish on their own.
 

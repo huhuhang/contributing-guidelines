@@ -43,7 +43,7 @@ Grammarly 有免费版和付费版，免费版可以满足你的日常使用。
 ### 试写目标
 
 1. 至少完成一组配套的 Lab/Challenge，包含 1 个 Lab 和 1 个 Challenge，需要包含多个 steps。
-2. 提交的试写 Lab 和 Challenge 是最好是配套的。[参考说明](what-are-the-lab-and-challenge.md#some-tips)
+2. 提交的试写 Lab 和 Challenge 是最好是配套的。[参考说明](labs-and-challenges.md#more-details)。
 
 > 这里再说明一下 lab/challenge 的相同点和不同点：你可以简单理解，lab 和 challenge 唯一的区别就是内容表述方式，和 `index.json` 中有一个 `type` 进行区分。二者在组织结构，所需要素上基本一致，包括 `verify` 脚本等。对于相同的 Skills，你可以把 lab 当作 guided mode 学习模式，而 challenge 则是 challenge mode。相当于一个把答案融在了步骤中，用户跟着学。另一个只有目标，用户需要自己搞定。这也就是为什么推荐大家选好一组 skills 之后，二者搭配来写，同时提供给我们。
 
