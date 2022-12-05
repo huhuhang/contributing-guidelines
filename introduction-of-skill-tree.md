@@ -4,7 +4,7 @@
 
 Skill Tree is LabEx's resource skeleton, linking different challenges and labs.
 
-![](<.gitbook/assets/image (4).png>)
+<figure><img src=".gitbook/assets/skill-tree.png" alt=""><figcaption>Skill Tree</figcaption></figure>
 
 Skill Tree is officially defined based on the technical direction, and the skills associated with each challenge and lab are derived from Skill Tree.LabEx keeps up to date with the latest Skill Tree, our content production trend.
 

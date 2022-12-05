@@ -2,7 +2,7 @@
 
 The smallest resource unit in LabEx is Lab and Challenge. Muti-Labs and multi-Challenges are grouped into a course.
 
-<figure><img src="../.gitbook/assets/LabEx Planning@2x (2).png" alt=""><figcaption><p>Labs and Challenges</p></figcaption></figure>
+<figure><img src=".gitbook/assets/basic-resource-unit.png" alt=""><figcaption><p>Basic Resource Unit</p></figcaption></figure>
 
 ## What is a Lab
 
@@ -12,7 +12,7 @@ Labs are interactive, pre-configured, sandbox-style development environments acc
 
 We need experienced technical writers or engineers to help enrich this platform's hands-on Labs.
 
-<figure><img src="../.gitbook/assets/LabEx Planning@2x (1).png" alt=""><figcaption><p>The Structure of Labs and Challenges</p></figcaption></figure>
+<figure><img src=".gitbook/assets/basic-resource-structure.png" alt=""><figcaption><p>The Structure of Labs and Challenges</p></figcaption></figure>
 
 **Labs have the following characteristics:**
 
