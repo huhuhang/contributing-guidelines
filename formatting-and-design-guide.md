@@ -17,6 +17,7 @@ This guide is intended to help you write and design documentation that is clear,
 6. Single backticks can only be used for inline code. It can not be used for highlighting a word or phrase.
    - For example, `print("Hello World")`.
 7. Double backticks can only be used for code blocks. It must have a language specified.
+8. Grammarly should be used to check for spelling and grammar errors.
 
 ## Images
 
@@ -46,7 +47,7 @@ cat echoserver.yaml
 
 instead of:
 
-In the next step you will see there is a YAML file that defines this application. Click on or type this command to see the YAML file.
+In the next step, you will see there is a YAML file that defines this application. Click on or type this command to see the YAML file.
 
 ```bash
 cat echoserver.yaml
