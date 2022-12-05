@@ -10,4 +10,4 @@
 - [GitHub Copilot Tips](github-copilot-tips.md)
 - [Honesty Policy](honesty-policy.md)
 - [Author Candidate Task](author-candidate-task.md)
-- [For Chinese Writer](for-chinese-writer.md)
+- [For Chinese Author 🇨🇳](for-chinese-author.md)
