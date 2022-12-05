@@ -2,6 +2,12 @@
 
 Before submitting new labs, please read the [Collaborating with pull requests.](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
 
+## Step 0: Fork the repository
+
+If you are still in the trial writing stage, fork the repository to your own GitHub account and then clone it to your local machine.
+
+If you are already our author, you don't need to fork the repository. We will invite you to join our organization and then you can clone the repository directly.
+
 ## Step 1: Create a new branch
 
 1. Open your terminal
