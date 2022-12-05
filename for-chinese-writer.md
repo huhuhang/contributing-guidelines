@@ -40,6 +40,8 @@ Grammarly 有免费版和付费版，免费版可以满足你的日常使用。
 
 所有的新晋作者都需要先完成内容试写。
 
+你需要先加入 [GitHub Classroom](https://classroom.github.com/a/Kk9m0rBm)，系统会自动为你创建好试写仓库。
+
 ### 试写目标
 
 1. 至少完成一组配套的 Lab/Challenge，包含 1 个 Lab 和 1 个 Challenge，需要包含多个 steps。
@@ -50,9 +52,6 @@ Grammarly 有免费版和付费版，免费版可以满足你的日常使用。
 ### 试写要求
 
 - 试写 Lab/Challenge 包含的 Skills 需要从我们提供的 Skill Tree 中选择。单个 Lab/Challenge 包含的 Skills 尽可能属于同一个 Skills Group。
-- Fork 试写仓库，通过 PR 提交试写内容到仓库中。
-  - 试写仓库（推荐）：[https://github.com/huhuhang/labex-trial](https://github.com/huhuhang/labex-trial)
-  - 国内镜像：[https://gitee.com/huhuhang/labex-trial](https://gitee.com/huhuhang/labex-trial)
 - 环境测试和截图可以暂时使用：[https://www.lanqiao.cn/courses/16516/](https://www.lanqiao.cn/courses/16516/)
 - 请严格遵循本指南的其他要求和规定。
 
