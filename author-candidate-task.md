@@ -4,7 +4,7 @@ Welcome to the Author Candidate Task! This task is designed to give you a chance
 
 ## Preparation
 
-Join the [GitHub Classroom](https://classroom.github.com/a/Kk9m0rBm), and it will create a template repository for you. You can then clone the repository to your local machine.
+- Fork Repo: [https://github.com/labex-labs/labex-trial](https://github.com/labex-labs/labex-trial)
 
 ## Task
 
@@ -15,3 +15,7 @@ Join the [GitHub Classroom](https://classroom.github.com/a/Kk9m0rBm), and it wil
 
 - The Skills included in the Lab/Challenge need to be selected from the Skill Tree we provide. Skills included in a single Lab/Challenge should belong to the same Skills Group if possible.
 - Please strictly follow the other requirements and regulations of this guide.
+
+### Submission
+
+- Submit a pull request to the original repo, and add `huhuhang` as a reviewer.
