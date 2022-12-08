@@ -7,7 +7,7 @@ To author interactive labs and challenges, you must already be familiar with the
 - Using the Linux command-line interface (Specifically, a bash terminal).
 - [Git](https://docs.github.com/en/get-started/using-git/about-git) (Cloning a repository, making commits, and pushing commits to a server).
 - [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) (Writing text and basic formatting syntax).
-- JSON (Cofig file format).
+- JSON (Config file format).
 
 Of course, you'll also need expertise in the subject matter of your labs.
 
@@ -47,7 +47,7 @@ Note:
 - `index.json`: the config file for your scenario, including where you specify the title, description, level, and estimated time to complete, as shown to learners. **Learn more about** [**index.json**](https://www.katacoda.community/essentials/scenario-syntax.html#understanding-katacoda-s-index-json)**.**
 - `intro.md` and `finish.md`: Markdown files for the text shown at the start and end of the Lab. Format requirements are detailed in the template experiment.
 - `setup.sh`: a shell script executed at the lab environment starting.
-- `step*.md`: Markdown files for the lesson text shown alongside each "step" of the Lab.
+- `step*.md`: Markdown files for the lesson text are shown alongside each "step" of the Lab.
 - `verify*.sh`: (Optional) Shell scripts executed to verify the steps are complete. One step can have single or multiple verification scripts. Some steps may not need verification scripts.
 - `assets`: (Optional) the folder includes all the example data or supporting files used in the Lab.
   - Including images of the markdown files, and images should be [compressed](https://tinypng.com/) to reduce the size of the repository.
@@ -145,11 +145,11 @@ The fields in `index.json` are explained in detail.
 
 There are five basic fields in `index.json`:
 
-1. `type`: The type of the scenario, must be `lab` or `challenge`. [See more details](labs-and-challenges.md)
+1. `type`: The type of scenario must be `lab` or `challenge`. [See more details](labs-and-challenges.md)
 2. `title`: The title of the scenario. Usually, the title is the same as the folder name.
 3. `description`: The description of the scenario.
 4. `time`: The estimated time to complete the scenario. e.g: "5 minutes", "15 minutes".
-5. `difficulty`: The difficulty of the scenario, must be "Beginner", "Intermediate", or "Advanced".
+5. `difficulty`: The difficulty of scenario must be "Beginner", "Intermediate", or "Advanced".
 
 The difficulty can be one of the following:
 
