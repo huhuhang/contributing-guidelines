@@ -233,13 +233,13 @@ The `environment` item specifies the environment of the lab.
 
 The parameters of the environment are:
 
-1. `workbench`: The workbench of the lab. The workbench field is not required and will use the default connection method provided by the environment if not filled in.
+- `workbench`: The workbench of the lab. The workbench field is not required and will use the default connection method provided by the environment if not filled in.
 
 The parameters of the workbench are:
 
 - `tabs`: The tabs of the workbench. The parameters of the tabs are:
   - `name`: The name of the tab.
-  - `type`: The type of the tab, must be "vnc", "terminal", or "iframe".
+  - `type`: The type of the tab must be `vnc`, `terminal`, or `iframe`.
   - `port`: (Optional) The port of the tab.
 
-2. `backend`: The backend of the lab. now only support "vnc-ubuntu:2004", "webide-ubuntu:2004".
+- `backend`: The backend of the lab. Now only support `vnc-ubuntu:2004`, `webide-ubuntu:2004`.
