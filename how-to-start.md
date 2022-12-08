@@ -57,26 +57,27 @@ Most of the configuration items in the index.json file are already written. You 
 
 ## index.json Configuration
 
+This is a sample `index.json` file:
+
 ```json
 {
-  "type": "lab/challenge", // The type of the scenario, must be "lab" or "challenge".
-  "title": "Basic Template", // The title of the scenario.
-  "description": "The description of basic template", // The description of the scenario.
-  "difficulty": "Beginner", // The difficulty of the scenario, must be "Beginner", "Intermediate", or "Advanced".
-  "time": "5 minutes", // The estimated time to complete the scenario.
+  "type": "lab",
+  "title": "Basic Template",
+  "description": "The description of basic template",
+  "difficulty": "Beginner",
+  "time": "5 minutes",
   "details": {
-    // The details of the scenario.
     "steps": [
       {
-        "title": "Bananas", // The title of the step.
-        "text": "step1.md", // The markdown file of the step.
+        "title": "Bananas",
+        "text": "step1.md",
         "verify": [
           {
-            "name": "Check if bananas.txt exists", // The purpose of the script.
-            "file": "verify1-1.sh", // The verification script.
-            "hint": "Please create file bananas.txt in /home/labex", // The hint of the script.
-            "timeout": 0, // The timeout of the script.
-            "showstderr": false // Whether to show the stderr message of the script.
+            "name": "Check if bananas.txt exists",
+            "file": "verify1-1.sh",
+            "hint": "Please create file bananas.txt in /home/labex",
+            "timeout": 0,
+            "showstderr": false
           },
           {
             "name": "Check if apples.txt exists",
@@ -86,7 +87,8 @@ Most of the configuration items in the index.json file are already written. You 
             "showstderr": true
           }
         ],
-        "skills": ["linux/ls", "linux/cd"] // The skills of the step.
+        "skills": ["linux/ls", "linux/cd"],
+        "layout": "doc-workbench-split"
       },
       {
         "title": "Oranges",
@@ -104,10 +106,10 @@ Most of the configuration items in the index.json file are already written. You 
       }
     ],
     "intro": {
-      "text": "intro.md" // The markdown file of the intro.
+      "text": "intro.md"
     },
     "finish": {
-      "text": "finish.md" // The markdown file of the finish.
+      "text": "finish.md"
     },
     "assets": {
       "host01": [
@@ -115,29 +117,76 @@ Most of the configuration items in the index.json file are already written. You 
           "file": "*",
           "target": "~/"
         }
-      ] // The assets of the scenario.
+      ]
+    },
+    "environment": {
+      "workbench": {
+        "tabs": [
+          {
+            "name": "Desktop",
+            "type": "vnc"
+          },
+          {
+            "name": "Terminal",
+            "type": "terminal"
+          },
+          {
+            "name": "WebIDE",
+            "type": "iframe",
+            "port": 3000
+          }
+        ]
+      }
+    },
+    "backend": {
+      "imageid": "webide"
     }
-  },
-  "environment": {
-    "uilayout": "editor-terminal" // The layout of the scenario.
-  },
-  "backend": {
-    "imageid": "ubuntu:2004" // The image of the scenario.
   }
 }
 ```
 
-### Verify Script
+<figure><img src=".gitbook/assets/index-json.png" alt=""><figcaption><p>A sample index.json</p></figcaption></figure>
 
-The `verify` parameter contains a series of verification scripts that will be executed **in order**. The parameters of the verification scripts are:
+The fields in `index.json` are explained in detail.
 
-1. `name`: The purpose of the script, it will be displayed to the learner, so it should be clear and concise.
-2. `file`: The path of the script.
-3. `hint`: The message when the script is unsuccessful, will be displayed to the learner, so it should be clear and concise.
-4. `timeout`: Default `0`, which means no limit on the execution time of the script, if set, it means a limit on the number of seconds to execute.
-5. `showstderr`: Default is `false`, set to true to show stderr returned by the script, and no longer displays hint.
+### Basic fields
 
-### Assets
+There are five basic fields in `index.json`:
+
+1. `type`: The type of the scenario, must be `lab` or `challenge`. [See more details](labs-and-challenges.md)
+2. `title`: The title of the scenario. Usually, the title is the same as the folder name.
+3. `description`: The description of the scenario.
+4. `time`: The estimated time to complete the scenario. e.g: "5 minutes", "15 minutes".
+5. `difficulty`: The difficulty of the scenario, must be "Beginner", "Intermediate", or "Advanced".
+
+The difficulty can be one of the following:
+
+- `Beginner`: The Lab/Challenge contains only single or multiple skills **in the same skills group**. and the skills are easy. Usually, the Lab/Challenge is a single step.
+- `Intermediate`: The Lab/Challenge contains multiple skills from **different skill groups**. and the skills are not very difficult.
+- `Advanced`: The Lab/Challenge contains multiple skills from **different subjects or projects**. and the skills are more difficult. Usually, the Lab/Challenge is a multi-step Lab/Challenge.
+
+_Our skills structure: skill > skill group > subject > project. e.g: cd > Directory Operations > Linux Commands > Linux_
+
+### Details fields
+
+Details fields are the most important fields in `index.json`. The `details` field contains the following items:
+
+#### Steps
+
+The `steps` item specifies the steps of the lab. The parameters of the steps are:
+
+1. `title`: The title of the step. It will be displayed to the learner, so it should be clear and concise.
+2. `text`: The markdown file of the step. The name of the markdown file.
+3. `verify`: The `verify` parameter contains a series of verification scripts that will be executed **in order**. The parameters of the verification scripts are:
+   1. `name`: The purpose of the script. It will be displayed to the learner, so it should be clear and concise.
+   2. `file`: The name of the script.
+   3. `hint`: The message when the script is unsuccessful will be displayed to the learner, so it should be clear and concise.
+   4. `timeout`: Default `0`, which means no limit on the execution time of the script, if set, it means a limit on the number of seconds to execute.
+   5. `showstderr`: Default is `false`, set to true to show stderr returned by the script, and no longer displays hint.
+4. `skills`: The skills of the step. it comes from the official skills tree. [See more details](introduction-of-skill-tree.md).
+5. `layout`: (Optional) The layout of the step, must be `doc-workbench-split` or `doc-fullscreen`. Intro and finish step default to `doc-fullscreen` if not filled, other steps default to `doc-workbench-split` if not filled.
+
+#### Assets
 
 The `assets` item specifies which assets you want to be copied to the lab environment at runtime. The default name of your lab environment is `host01`, and you can copy all files to the home folder of the default login user.
 
@@ -166,33 +215,31 @@ Keep your assets lightweight; each is limited to 9 MB per file. There is no limi
 
 The verification script is executed when the learner completes a step and clicks the `Next` button. It runs in the background until it returns an exit code of zero (success), at which point the step is flagged as completed, and the lab proceeds to display the next step. No parameters are passed to the verification script, and the script is expected to return the standard zero for success or non-zero for failure.
 
-### Difficulties
+#### Environment and backend fields
 
-The difficulty of the Lab/Challenge is defined in the `index.json` file.
+The `environment` item specifies the environment of the lab.
 
 ```json
-"difficulty": "Beginner"
+"environment": {
+  "workbench": {
+    "tabs": [
+      { "name": "Desktop", "type": "vnc" },
+      { "name": "Terminal", "type": "terminal" },
+      { "name": "WebIDE", "type": "iframe", "port": 3000 }
+    ]
+  }
+}
 ```
 
-The difficulty can be one of the following:
+The parameters of the environment are:
 
-- `Beginner`: The Lab/Challenge contains only single or multiple skills **in the same skills group**. and the skills are easy. Usually, the Lab/Challenge is a single step.
-- `Intermediate`: The Lab/Challenge contains multiple skills from **different skill groups**. and the skills are not very difficult.
-- `Advanced`: The Lab/Challenge contains multiple skills from **different subjects or projects**. and the skills are more difficult. Usually, the Lab/Challenge is a multi-step Lab/Challenge.
+1. `workbench`: The workbench of the lab. The workbench field is not required and will use the default connection method provided by the environment if not filled in.
 
-_Our skills structure: skill > skill group > subject > project. e.g: cd > Directory Operations > Linux Commands > Linux_
+The parameters of the workbench are:
 
-## Commit and Test
+- `tabs`: The tabs of the workbench. The parameters of the tabs are:
+  - `name`: The name of the tab.
+  - `type`: The type of the tab, must be "vnc", "terminal", or "iframe".
+  - `port`: (Optional) The port of the tab.
 
-The basic workflow of authoring a lab on GitHub is as follows:
-
-- Make edits.
-- Copy support files to the assets folder.
-- Update the `index.json` file with steps and assets.
-- Save changes.
-- Commit changes locally with git.
-- Push commits back to the remote.
-
-Wait 30-60 seconds, then access the test course in your browser.
-
-All of the labs in this GitHub repository can be found in the test course. You can start the environment and test every step in your Lab. Please ensure that each step can be executed correctly in the lab environment and that the verification script can be verified successfully.
+2. `backend`: The backend of the lab. now only support "vnc-ubuntu:2004", "webide-ubuntu:2004".
