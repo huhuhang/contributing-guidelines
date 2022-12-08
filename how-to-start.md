@@ -106,7 +106,8 @@ This is a sample `index.json` file:
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "background": "setup.sh"
     },
     "finish": {
       "text": "finish.md"
@@ -119,27 +120,8 @@ This is a sample `index.json` file:
         }
       ]
     },
-    "environment": {
-      "workbench": {
-        "tabs": [
-          {
-            "name": "Desktop",
-            "type": "vnc"
-          },
-          {
-            "name": "Terminal",
-            "type": "terminal"
-          },
-          {
-            "name": "WebIDE",
-            "type": "iframe",
-            "port": 3000
-          }
-        ]
-      }
-    },
     "backend": {
-      "imageid": "webide"
+      "imageid": "vnc-ubuntu:2004"
     }
   }
 }
@@ -195,6 +177,7 @@ The `assets` item specifies which assets you want to be copied to the lab enviro
     "host01": [
         { "file": "*", "target": "~/" }
     ]
+}
 ```
 
 Note that the target directory can be anything you want. In this example, `~/` maps to `/home/labex`, since `labex` is the default user, and `/home/labex` is that user's home directory.
@@ -215,31 +198,6 @@ Keep your assets lightweight; each is limited to 9 MB per file. There is no limi
 
 The verification script is executed when the learner completes a step and clicks the `Next` button. It runs in the background until it returns an exit code of zero (success), at which point the step is flagged as completed, and the lab proceeds to display the next step. No parameters are passed to the verification script, and the script is expected to return the standard zero for success or non-zero for failure.
 
-#### Environment and backend fields
+#### Backend fields
 
-The `environment` item specifies the environment of the lab.
-
-```json
-"environment": {
-  "workbench": {
-    "tabs": [
-      { "name": "Desktop", "type": "vnc" },
-      { "name": "Terminal", "type": "terminal" },
-      { "name": "WebIDE", "type": "iframe", "port": 3000 }
-    ]
-  }
-}
-```
-
-The parameters of the environment are:
-
-- `workbench`: The workbench of the lab. The workbench field is not required and will use the default connection method provided by the environment if not filled in.
-
-The parameters of the workbench are:
-
-- `tabs`: The tabs of the workbench. The parameters of the tabs are:
-  - `name`: The name of the tab.
-  - `type`: The type of the tab must be `vnc`, `terminal`, or `iframe`.
-  - `port`: (Optional) The port of the tab.
-
-- `backend`: The backend of the lab. Now only support `vnc-ubuntu:2004`, `webide-ubuntu:2004`.
+The `backend` item specifies the backend of the lab. Now only support `vnc-ubuntu:2004`, `webide-ubuntu:2004`.
