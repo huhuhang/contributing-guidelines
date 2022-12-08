@@ -133,6 +133,16 @@ The fields in `index.json` are explained in detail.
 
 ### Basic fields
 
+```json
+{
+  "type": "lab",
+  "title": "Basic Template",
+  "description": "The description of basic template",
+  "difficulty": "Beginner",
+  "time": "5 minutes"
+}
+```
+
 There are five basic fields in `index.json`:
 
 1. `type`: The type of the scenario, must be `lab` or `challenge`. [See more details](labs-and-challenges.md)
@@ -155,7 +165,50 @@ Details fields are the most important fields in `index.json`. The `details` fiel
 
 #### Steps
 
-The `steps` item specifies the steps of the lab. The parameters of the steps are:
+The `intro` and `finish` items are the configuration of the start and end of the Lab. Both are special steps, and default to `doc-fullscreen` layout.
+
+```json
+"intro": {
+  "text": "intro.md",
+  "background": "setup.sh"
+},
+"finish": {
+  "text": "finish.md"
+}
+```
+
+If `setup.sh` is specified in the `background` item, the script will be executed when the Lab starts.
+
+Other `steps` item specifies the steps of the lab.
+
+```json
+"steps": [
+  {
+    "title": "Bananas",
+    "text": "step1.md",
+    "verify": [
+      {
+        "name": "Check if bananas.txt exists",
+        "file": "verify1-1.sh",
+        "hint": "Please create file bananas.txt in /home/labex",
+        "timeout": 0,
+        "showstderr": false
+      },
+      {
+        "name": "Check if apples.txt exists",
+        "file": "verify1-2.sh",
+        "hint": "Please create apples.txt in /home/labex",
+        "timeout": 10,
+        "showstderr": true
+      }
+    ],
+    "skills": ["linux/ls", "linux/cd"],
+    "layout": "doc-workbench-split"
+  }
+]
+```
+
+The parameters of the steps are:
 
 1. `title`: The title of the step. It will be displayed to the learner, so it should be clear and concise.
 2. `text`: The markdown file of the step. The name of the markdown file.
@@ -166,7 +219,7 @@ The `steps` item specifies the steps of the lab. The parameters of the steps are
    4. `timeout`: Default `0`, which means no limit on the execution time of the script, if set, it means a limit on the number of seconds to execute.
    5. `showstderr`: Default is `false`, set to true to show stderr returned by the script, and no longer displays hint.
 4. `skills`: The skills of the step. it comes from the official skills tree. [See more details](introduction-of-skill-tree.md).
-5. `layout`: (Optional) The layout of the step, must be `doc-workbench-split` or `doc-fullscreen`. Intro and finish step default to `doc-fullscreen` if not filled, other steps default to `doc-workbench-split` if not filled.
+5. `layout`: (Optional) The layout of the step, must be `doc-workbench-split` or `doc-fullscreen`. Intro and finish step default to `doc-fullscreen`, other steps default to `doc-workbench-split` if not filled.
 
 #### Assets
 
