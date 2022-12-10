@@ -61,69 +61,75 @@ This is a sample `index.json` file:
 
 ```json
 {
-  "type": "lab",
-  "title": "Basic Template",
-  "description": "The description of basic template",
-  "difficulty": "Beginner",
-  "time": "5 minutes",
-  "details": {
-    "steps": [
-      {
-        "title": "Bananas",
-        "text": "step1.md",
-        "verify": [
-          {
-            "name": "Check if bananas.txt exists",
-            "file": "verify1-1.sh",
-            "hint": "Please create file bananas.txt in /home/labex",
-            "timeout": 0,
-            "showstderr": false
-          },
-          {
-            "name": "Check if apples.txt exists",
-            "file": "verify1-2.sh",
-            "hint": "Please create apples.txt in /home/labex",
-            "timeout": 10,
-            "showstderr": true
-          }
+    "type": "lab",
+    "title": "Basic Template",
+    "description": "The description of basic template",
+    "difficulty": "Beginner",
+    "time": "5 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Bananas",
+                "text": "step1.md",
+                "verify": [
+                    {
+                        "name": "Check if bananas.txt exists",
+                        "file": "verify1-1.sh",
+                        "hint": "Please create file bananas.txt in /home/labex",
+                        "timeout": 0,
+                        "showstderr": false
+                    },
+                    {
+                        "name": "Check if apples.txt exists",
+                        "file": "verify1-2.sh",
+                        "hint": "Please create apples.txt in /home/labex",
+                        "timeout": 10,
+                        "showstderr": true
+                    }
+                ],
+                "skills": [
+                    "linux/ls",
+                    "linux/cd"
+                ],
+                "layout": "doc-workbench-split"
+            },
+            {
+                "title": "Oranges",
+                "text": "step2.md",
+                "verify": [
+                    {
+                        "name": "Check if oranges.txt exists",
+                        "file": "verify2.sh",
+                        "hint": "Please create file test.txt in /home/labex",
+                        "timeout": 0,
+                        "showstderr": false
+                    }
+                ],
+                "skills": [
+                    "linux/ls",
+                    "linux/cd"
+                ]
+            }
         ],
-        "skills": ["linux/ls", "linux/cd"],
-        "layout": "doc-workbench-split"
-      },
-      {
-        "title": "Oranges",
-        "text": "step2.md",
-        "verify": [
-          {
-            "name": "Check if oranges.txt exists",
-            "file": "verify2.sh",
-            "hint": "Please create file test.txt in /home/labex",
-            "timeout": 0,
-            "showstderr": false
-          }
-        ],
-        "skills": ["linux/ls", "linux/cd"]
-      }
-    ],
-    "intro": {
-      "text": "intro.md",
-      "background": "setup.sh"
-    },
-    "finish": {
-      "text": "finish.md"
-    },
-    "assets": {
-      "host01": [
-        {
-          "file": "*",
-          "target": "~/"
+        "intro": {
+            "text": "intro.md",
+            "background": "setup.sh"
+        },
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [
+                {
+                    "file": "*",
+                    "target": "~/"
+                }
+            ]
         }
-      ]
     },
     "backend": {
-      "imageid": "vnc-ubuntu:2004"
+        "imageid": "vnc-ubuntu:2004"
     }
-  }
 }
 ```
 
@@ -251,6 +257,6 @@ Keep your assets lightweight; each is limited to 9 MB per file. There is no limi
 
 The verification script is executed when the learner completes a step and clicks the `Next` button. It runs in the background until it returns an exit code of zero (success), at which point the step is flagged as completed, and the lab proceeds to display the next step. No parameters are passed to the verification script, and the script is expected to return the standard zero for success or non-zero for failure.
 
-#### Backend fields
+## Backend fields
 
 The `backend` item specifies the backend of the lab. Now only support `vnc-ubuntu:2004`, `webide-ubuntu:2004`.
