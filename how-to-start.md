@@ -133,7 +133,7 @@ This is a sample `index.json` file:
 }
 ```
 
-<figure><img src=".gitbook/assets/index-json.png" alt=""><figcaption><p>A sample index.json</p></figcaption></figure>
+<figure><img src=".gitbook/assets/index-json.png" alt=""><figcaption><p>A sample index.json on https://jsoncrack.com/editor?json=63afa05d12ddb2b7fb882595</p></figcaption></figure>
 
 The fields in `index.json` are explained in detail.
 
