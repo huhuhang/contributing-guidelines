@@ -61,75 +61,69 @@ This is a sample `index.json` file:
 
 ```json
 {
-    "type": "lab",
-    "title": "Basic Template",
-    "description": "The description of basic template",
-    "difficulty": "Beginner",
-    "time": "5 minutes",
-    "details": {
-        "steps": [
-            {
-                "title": "Bananas",
-                "text": "step1.md",
-                "verify": [
-                    {
-                        "name": "Check if bananas.txt exists",
-                        "file": "verify1-1.sh",
-                        "hint": "Please create file bananas.txt in /home/labex",
-                        "timeout": 0,
-                        "showstderr": false
-                    },
-                    {
-                        "name": "Check if apples.txt exists",
-                        "file": "verify1-2.sh",
-                        "hint": "Please create apples.txt in /home/labex",
-                        "timeout": 10,
-                        "showstderr": true
-                    }
-                ],
-                "skills": [
-                    "linux/ls",
-                    "linux/cd"
-                ],
-                "layout": "doc-workbench-split"
-            },
-            {
-                "title": "Oranges",
-                "text": "step2.md",
-                "verify": [
-                    {
-                        "name": "Check if oranges.txt exists",
-                        "file": "verify2.sh",
-                        "hint": "Please create file test.txt in /home/labex",
-                        "timeout": 0,
-                        "showstderr": false
-                    }
-                ],
-                "skills": [
-                    "linux/ls",
-                    "linux/cd"
-                ]
-            }
+  "type": "lab",
+  "title": "Basic Template",
+  "description": "The description of basic template",
+  "difficulty": "Beginner",
+  "time": "5 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Bananas",
+        "text": "step1.md",
+        "verify": [
+          {
+            "name": "Check if bananas.txt exists",
+            "file": "verify1-1.sh",
+            "hint": "Please create file bananas.txt in /home/labex",
+            "timeout": 0,
+            "showstderr": false
+          },
+          {
+            "name": "Check if apples.txt exists",
+            "file": "verify1-2.sh",
+            "hint": "Please create apples.txt in /home/labex",
+            "timeout": 10,
+            "showstderr": true
+          }
         ],
-        "intro": {
-            "text": "intro.md",
-            "background": "setup.sh"
-        },
-        "finish": {
-            "text": "finish.md"
-        },
-        "assets": {
-            "host01": [
-                {
-                    "file": "*",
-                    "target": "~/"
-                }
-            ]
-        }
+        "skills": ["linux/ls", "linux/cd"],
+        "layout": "doc-workbench-split"
+      },
+      {
+        "title": "Oranges",
+        "text": "step2.md",
+        "verify": [
+          {
+            "name": "Check if oranges.txt exists",
+            "file": "verify2.sh",
+            "hint": "Please create file test.txt in /home/labex",
+            "timeout": 0,
+            "showstderr": false
+          }
+        ],
+        "skills": ["linux/ls", "linux/cd"]
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
     },
-    "backend": {
-        "imageid": "vnc-ubuntu:2004"
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "*",
+          "target": "~/"
+        }
+      ]
     }
+  },
+  "backend": {
+    "imageid": "vnc-ubuntu:2004"
+  }
 }
 ```
 
@@ -227,6 +221,8 @@ The parameters of the steps are:
 4. `skills`: The skills of the step. it comes from the official skills tree. [See more details](introduction-of-skill-tree.md).
 5. `layout`: (Optional) The layout of the step, must be `doc-workbench-split` or `doc-fullscreen`. Intro and finish step default to `doc-fullscreen`, other steps default to `doc-workbench-split` if not filled.
 
+The verification script is executed when the learner completes a step and clicks the `Next` button. It runs in the background until it returns an exit code of zero (success), at which point the step is flagged as completed, and the lab proceeds to display the next step. No parameters are passed to the verification script, and the script is expected to return the standard zero for success or non-zero for failure.
+
 #### Assets
 
 The `assets` item specifies which assets you want to be copied to the lab environment at runtime. The default name of your lab environment is `host01`, and you can copy all files to the home folder of the default login user.
@@ -255,8 +251,10 @@ The example below copies over three specific assets. Instead of using the `*` wi
 
 Keep your assets lightweight; each is limited to 9 MB per file. There is no limit to the number of assets, but using more assets will increase the loading time of the Lab.
 
-The verification script is executed when the learner completes a step and clicks the `Next` button. It runs in the background until it returns an exit code of zero (success), at which point the step is flagged as completed, and the lab proceeds to display the next step. No parameters are passed to the verification script, and the script is expected to return the standard zero for success or non-zero for failure.
-
 ## Backend fields
 
-The `backend` item specifies the backend of the lab. Now only support `vnc-ubuntu:2004`, `webide-ubuntu:2004`.
+The `backend` item specifies the backend of the lab. Now only support:
+
+- `vnc-ubuntu:2004`
+- `webide-ubuntu:2004`
+- `kvm-ubuntu:2204`
