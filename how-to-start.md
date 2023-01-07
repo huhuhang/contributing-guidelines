@@ -65,7 +65,7 @@ This is a sample `index.json` file:
   "title": "Basic Template",
   "description": "The description of basic template",
   "difficulty": "Beginner",
-  "time": "5 minutes",
+  "time": 5,
   "details": {
     "steps": [
       {
@@ -139,7 +139,7 @@ The fields in `index.json` are explained in detail.
   "title": "Basic Template",
   "description": "The description of basic template",
   "difficulty": "Beginner",
-  "time": "5 minutes"
+  "time": 5,
 }
 ```
 
@@ -148,7 +148,7 @@ There are five basic fields in `index.json`:
 1. `type`: The type of scenario must be `lab` or `challenge`. [See more details](labs-and-challenges.md)
 2. `title`: The title of the scenario. Usually, the title is the same as the folder name.
 3. `description`: The description of the scenario.
-4. `time`: The estimated time to complete the scenario. e.g: "5 minutes", "15 minutes".
+4. `time`: The estimated *minutes* to complete the scenario. The time *must be* a number. e.g: `5`.
 5. `difficulty`: The difficulty of scenario must be "Beginner", "Intermediate", or "Advanced".
 
 The difficulty can be one of the following:
