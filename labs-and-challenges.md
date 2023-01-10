@@ -24,7 +24,7 @@ We need experienced technical writers or engineers to help enrich this platform'
 - Complex Labs with no learning time limit.
 
 {% hint style="info" %}
-Examples: [https://github.com/huhuhang/labex-trial](https://github.com/huhuhang/labex-trial)
+Examples: [https://github.com/labex-labs/labex-candidate](https://github.com/labex-labs/labex-candidate)
 {% endhint %}
 
 ## What is a Challenge
@@ -46,7 +46,7 @@ When students cannot pass a Challenge, they can learn the Lab, which contains th
 - No time limit for the learner to complete a Challenge.
 
 {% hint style="info" %}
-Examples: [https://github.com/huhuhang/labex-trial](https://github.com/huhuhang/labex-trial)
+Examples: [https://github.com/labex-labs/labex-candidate](https://github.com/labex-labs/labex-candidate)
 {% endhint %}
 
 ## More Details
@@ -55,7 +55,7 @@ In most cases, we recommend that you create a Lab first, and then create a Chall
 
 When students cannot pass a Challenge, they can learn the Lab, which contains the same skill points. This is a great way to learn and practice the skills.
 
-You can see the example: [https://github.com/huhuhang/labex-trial/tree/master/python](https://github.com/huhuhang/labex-trial/tree/master/python)
+You can see the example: [https://github.com/labex-labs/labex-candidate/tree/master/python](https://github.com/labex-labs/labex-candidate/tree/master/python)
 
 The lab contains 6 steps, but only the sixth step contains the verification script. We evolved the sixth step into a challenge, containing slight changes.
 

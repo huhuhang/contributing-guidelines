@@ -40,7 +40,7 @@ Grammarly 有免费版和付费版，免费版可以满足你的日常使用。
 
 所有的新晋作者都需要先完成内容试写。
 
-你需要先 Fork 试写仓库：[https://github.com/labex-labs/labex-trial](https://github.com/labex-labs/labex-trial)
+你需要先 Fork 试写仓库：[https://github.com/labex-labs/labex-candidate](https://github.com/labex-labs/labex-candidate)
 
 ### 试写目标
 

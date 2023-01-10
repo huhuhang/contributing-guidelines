@@ -4,7 +4,7 @@ Welcome to the Author Candidate Task! This task is designed to give you a chance
 
 ## Preparation
 
-- Fork Repo: [https://github.com/labex-labs/labex-trial](https://github.com/labex-labs/labex-trial)
+- Fork Repo: [https://github.com/labex-labs/labex-candidate](https://github.com/labex-labs/labex-candidate)
 
 ## Task
 
