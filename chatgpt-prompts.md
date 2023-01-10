@@ -12,6 +12,6 @@ Please help me write a hands-on programming lab with the following requirements:
 - the lab is about {{Python Classes and Objects}}.
 - the lab is step-by-step.
 - include code examples from simple to complex.
-- Include an introduction and a summary.
+- include an introduction and a summary.
 - using a markdown format.
 ```
