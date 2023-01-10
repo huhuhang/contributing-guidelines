@@ -7,6 +7,7 @@
 - [Formatting and Design Guide](formatting-and-design-guide.md)
 - [Introduction of Skill Tree](introduction-of-skill-tree.md)
 - [Recommended Workflows](recommended-workflows.md)
+- [ChatGPT Prompts](chatgpt-prompts.md)
 - [GitHub Copilot Tips](github-copilot-tips.md)
 - [Honesty Policy](honesty-policy.md)
 - [Author Candidate Task](author-candidate-task.md)
